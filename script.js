@@ -167,3 +167,5 @@ function endGameB(){
   leaveResultsB.classList.add("hide");
 
 }
+
+

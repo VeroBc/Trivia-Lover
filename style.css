@@ -27,7 +27,8 @@ label {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: rgb(248, 151, 237);
+  background-image: url(https://user-images.githubusercontent.com/55853256/85799797-742c4800-b705-11ea-9877-5554d32b052f.jpg);
+  width: 100%;
 }
 
 .hide {
