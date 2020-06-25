@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>TRIVIA LOVER</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+
+<body> 
+
+  <div class="bloque" id="inicio">
+    
+    <h1>TRIVIA LOVER</h1>
+
+    <img src = "https://user-images.githubusercontent.com/55853256/85635626-f2c0b100-b643-11ea-9aa4-9e99d05263ff.png">
+        
+    <h1>Bienvenid@s!</h1>
+
+<table>
+  <tr> 
+    <td> 
+    <input type="text" id="name" placeholder="¿Cuál es tu nombre?" required>
+    </td>
+    <td>
+    <button onclick="printUserName()">OK</button>
+    </td>
+  </tr>
+</table>
+
+    <p id="demo"></p>
+
+    <button onclick="choiceTheme()">Juguemos!</button>
+        
+ </div>
+
+
+<div class="bloque hide" id="theme">
+
+<h1>¿Crees ser ...</h1> 
+<h1>DogLover o CatLover?</h1>
+
+<table>
+  <tr> 
+    <td> 
+      <img src = "https://user-images.githubusercontent.com/55853256/85597328-241f8980-b610-11ea-90d5-c55f5add0d1c.png">
+    </td>
+   
+    <td>
+    <img src = "https://user-images.githubusercontent.com/55853256/85597263-14a04080-b610-11ea-8fac-3aca7031adf2.png">
+    </td>
+  </tr>
+
+  <tr>
+    <td align = "center">
+    <button onclick="getQuestionsA()">DogLover</button>
+    </td>
+    <td align = "center">
+    <button onclick="getQuestionsB()">CatLover</button>
+    </td>
+  </tr>
+
+</table>
+
+</div>
+
+
+<div class="bloque hide" id="questionsA" >
+
+<h1>¿Eres DogLover?</h1>
+
+<ol>
+
+    <li> 
+      <label> ¿Cuál es el sentido más desarrollado de los perros? <label><br></br>
+      <input type="radio" id="olfato" name= "doglover1" value= 1>
+      <label for="olfato">Olfato</label><br></br>
+
+      <input type="radio" id="audicion" name= "doglover1" value= 0>
+      <label for="audicion">Audición</label><br></br>
+
+      <input type="radio" id="gusto" name= "doglover1" value= 0>
+      <label for="gusto">Gusto</label><br></br>
+    </li> 
+
+    <li> 
+      <label> ¿Cuál es la raza de perro más grande que existe? <label><br></br>
+      <input type="radio" id="sanbernardo" name= "doglover2" value= 1>
+      <label for= "sanbernardo">San Bernardo</label><br></br>
+      
+      <input type="radio" id="grandanes" name= "doglover2" value= 0>
+      <label for= "grandanes">Gran Danés</label><br></br>
+      
+      <input type="radio" id="labrador" name= "doglover2" value= 0>
+      <label for= "labrador">Labrador</label><br></br>
+    </li>
+
+    <li> 
+      <label> ¿Cuál es la raza de perro más inteligente? <label><br></br>
+      <input type="radio" id="pastoraleman" name= "doglover3" value= 1>
+      <label for="pastoraleman">Pastor Alemán</label><br></br>
+      
+      <input type="radio" id="foxterrier" name= "doglover3" value= 0>
+      <label for= "foxterrier">Fox Terrier</label><br></br>
+      
+      <input type="radio" id="dalmata" name= "doglover3" value= 0>
+      <label for= "dalmata">Dálmata</label><br></br>
+    </li>
+
+</ol>
+
+<input type="submit" value="Ver resultados" onclick= "getResultsA(); getResultsDogLover(); uncheckDogLover();"/>
+
+</div>
+
+<div class="bloque hide" id="questionsB" >
+
+<h1>¿Eres CatLover?</h1>
+
+<ol>
+      
+<li>
+      <label> ¿Hace cuántos años se empezaron a domesticar gatos? <label><br></br>
+      <input type="radio" id="10000años" name="catlover1" value=1>
+      <label for="10000años">10000 años</label><br></br>
+
+      <input type="radio" id="7500años" name="catlover1" value=0>
+      <label for="7500años">7500 años</label><br></br>
+
+      <input type="radio" id="5000años" name="catlover1" value=0>
+      <label for="5000años">5000 años</label><br></br>
+    </li>
+
+    <li>
+      <label> ¿Cuál es el nombre que reciben los gatos de 3 colores? <label><br></br>
+      <input type="radio" id="gatotricolor" name="catlover2" value=0> Gato Tricolor</label><br></br>
+      <input type="radio" id="gatocalico" name="catlover2" value=1>
+      <label>Gato Calicó</label><br></br>
+      <input type="radio" id="gatoquimera" name="catlover2" value=0> Gato Quimera</label><br></br>
+    </li>
+
+    <li>
+      <label> Crees que los gatos son: <label><br></br>
+      <input type="radio" id="zurdos" name="catlover3" value=1> Zurdos</label><br></br>
+      <input type="radio" id="diestros" name="catlover3" value=0> Diestros</label><br></br>
+      <input type="radio" id="ninguno" name="catlover3" value=0> Ninguno</label><br></br>
+    </li>    
+    
+</ol>
+
+<input type="submit" value="Ver resultados" onclick= "getResultsB(); getResultsCatLover(); uncheckCatLover();"/>
+
+</div>
+
+
+<div class="bloque hide" id="resultsUserA" >
+
+<h1>Resultados</h1>
+
+<ol>
+    <li> 
+      <p> ¿Cuál es el sentido más desarrollado de los perros?<p/> 
+      <div id="result1"></div>      
+    </li> 
+       
+    <li> 
+      <p>  ¿Cuál es la raza de perro más grande que existe? <p/>
+      <div id="result2"></div> 
+    </li>
+    
+    <li> 
+      <p> ¿Cuál es la raza de perro más inteligente? <p/>
+      <div id="result3"></div> 
+    </li>
+</ol>
+
+<table>
+<tr>
+  <td>0 de 3: No te desanimes, es muy fácil conocerlos!</td>
+</tr>
+<tr>
+  <td>1 de 3: Definitivamente los quieres, pero puedes aprender más de ellos!</td>
+</tr>
+<tr>
+  <td>2 de 3: </strong> Wow! Sabes mucho sobre ellos, sigue así!</td>
+</tr>
+<tr> 
+  <td>3 de 3: </strong> Felicitaciones! Eres todo un Trivia Lover! ♡</td>
+</tr>
+</table>
+
+<table>
+<tr>
+    <td>
+    <button onclick="getThemesAgainA()">Volver a Jugar!</button>
+    </td>
+    <td>
+    <button onclick="endGameA()">Ir al inicio</button>
+    </td>
+  </tr>
+</table>
+
+</div>
+
+
+<div class="bloque hide" id="resultsUserB" >
+
+<h1>Resultados</h1>
+
+<ol>
+    <li>
+      <p> ¿Hace cuántos años se empezaron a domesticar gatos? <p/>
+      <div id="result4"></div>
+    </li>
+
+    <li>
+      <p>  ¿Cuál es el nombre que reciben los gatos de 3 colores? <p/>
+      <div id="result5"></div>
+    </li>
+
+    <li>
+      <p> Crees que los gatos son: <p/>
+      <div id="result6"></div>
+    </li>
+</ol>
+
+<table>
+<tr>
+  <td>0 de 3: No te desanimes, es muy fácil conocerlos!</td>
+</tr>
+<tr>
+  <td>1 de 3: Definitivamente los quieres, pero puedes aprender más de ellos!</td>
+</tr>
+<tr>
+  <td>2 de 3: </strong> Wow! Sabes mucho sobre ellos, sigue así!</td>
+</tr>
+<tr> 
+  <td>3 de 3: </strong> Felicitaciones! Eres todo un Trivia Lover! ♡</td>
+</tr>
+</table>
+
+<table>
+<tr>
+    <td>
+    <button onclick="getThemesAgainB()">Volver a Jugar!</button>
+    </td>
+    <td>
+    <button onclick="endGameB()">Ir al inicio</button>
+    </td>
+  </tr>
+</table>
+
+</div>
+
+<script type="text/javascript" src="script.js"></script>
+
+</body>
+
+
