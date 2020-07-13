@@ -22,7 +22,7 @@
 <table>
   <tr> 
     <td> 
-    <input type="text" id="name" placeholder="¿Cuál es tu nombre?" required>
+    <input type="text"  class= "nombre" id="name" placeholder="¿Cuál es tu nombre?" required>
     </td>
     <td>
     <button onclick="printUserName()">OK</button>
@@ -30,9 +30,9 @@
   </tr>
 </table>
 
-    <p id="demo"></p>
+    <h2 id="demo"></h2>
 
-    <button onclick="choiceTheme()">Juguemos!</button>
+    <button onclick="choiceTheme()" class="button" >Juguemos!</button>
         
  </div>
 
@@ -55,10 +55,10 @@
 
   <tr>
     <td align = "center">
-    <button onclick="getQuestionsA()">DogLover</button>
+    <button onclick="getQuestionsA()" class="button" >DogLover</button>
     </td>
     <td align = "center">
-    <button onclick="getQuestionsB()">CatLover</button>
+    <button onclick="getQuestionsB()" class="button" >CatLover</button>
     </td>
   </tr>
 
@@ -74,7 +74,7 @@
 <ol>
 
     <li> 
-      <label> ¿Cuál es el sentido más desarrollado de los perros? <label><br></br>
+      <p> <strong> ¿Cuál es el sentido más desarrollado de los perros? </strong> </p>
       <input type="radio" id="olfato" name= "doglover1" value= 1>
       <label for="olfato">Olfato</label><br></br>
 
@@ -86,7 +86,7 @@
     </li> 
 
     <li> 
-      <label> ¿Cuál es la raza de perro más grande que existe? <label><br></br>
+      <p> <strong> ¿Cuál es la raza de perro más grande que existe? </strong> </p>
       <input type="radio" id="sanbernardo" name= "doglover2" value= 1>
       <label for= "sanbernardo">San Bernardo</label><br></br>
       
@@ -98,7 +98,7 @@
     </li>
 
     <li> 
-      <label> ¿Cuál es la raza de perro más inteligente? <label><br></br>
+      <p> <strong> ¿Cuál es la raza de perro más inteligente? </strong> </p>
       <input type="radio" id="pastoraleman" name= "doglover3" value= 1>
       <label for="pastoraleman">Pastor Alemán</label><br></br>
       
@@ -111,7 +111,7 @@
 
 </ol>
 
-<input type="submit" value="Ver resultados" onclick= "getResultsA(); getResultsDogLover(); uncheckDogLover();"/>
+<input type="submit" class="button" value="Ver resultados" onclick= "getResultsA(); getResultsDogLover(); uncheckDogLover();"/>
 
 </div>
 
@@ -122,7 +122,7 @@
 <ol>
       
 <li>
-      <label> ¿Hace cuántos años se empezaron a domesticar gatos? <label><br></br>
+      <p> <strong> ¿Hace cuántos años se empezaron a domesticar gatos? </strong> </p>
       <input type="radio" id="10000años" name="catlover1" value=1>
       <label for="10000años">10000 años</label><br></br>
 
@@ -134,27 +134,28 @@
     </li>
 
     <li>
-      <label> ¿Cuál es el nombre que reciben los gatos de 3 colores? <label><br></br>
-      <input type="radio" id="gatotricolor" name="catlover2" value=0> Gato Tricolor</label><br></br>
-
+      <p> <strong> ¿Cuál es el nombre que reciben los gatos de 3 colores? </strong> </p>
+      <input type="radio" id="gatotricolor" name="catlover2" value=0> 
+      <label for"gatotricolor"=>Gato Tricolor</label><br></br>
       <input type="radio" id="gatocalico" name="catlover2" value=1>
-      <label>Gato Calicó</label><br></br>
-
-      <input type="radio" id="gatoquimera" name="catlover2" value=0> Gato Quimera</label><br></br>
+      <label for="gatocalico">Gato Calicó</label><br></br>
+      <input type="radio" id="gatoquimera" name="catlover2" value=0> 
+      <label for="gatoquimera">Gato Quimera</label><br></br>
     </li>
 
     <li>
-      <label> Crees que los gatos son: <label><br></br>
-      <input type="radio" id="zurdos" name="catlover3" value=1> Zurdos</label><br></br>
-
-      <input type="radio" id="diestros" name="catlover3" value=0> Diestros</label><br></br>
-      
-      <input type="radio" id="ninguno" name="catlover3" value=0> Ninguno</label><br></br>
+      <p> <strong> Crees que los gatos son: </strong></p>
+      <input type="radio" id="zurdos" name="catlover3" value=1> 
+      <label for="zurdos">Zurdos</label><br></br>
+      <input type="radio" id="diestros" name="catlover3" value=0> 
+      <label for="diestros">Diestros</label><br></br>
+      <input type="radio" id="ninguno" name="catlover3" value=0> 
+      <label for="ninguno">Ninguno</label><br></br>
     </li>    
     
 </ol>
 
-<input type="submit" value="Ver resultados" onclick= "getResultsB(); getResultsCatLover(); uncheckCatLover();"/>
+<input type="submit" class="button" value="Ver resultados" onclick= "getResultsB(); getResultsCatLover(); uncheckCatLover();"/>
 
 </div>
 
@@ -170,14 +171,15 @@
     </li> 
        
     <li> 
-      <p>  ¿Cuál es la raza de perro más grande que existe? <p/>
+      <p> ¿Cuál es la raza de perro más grande que existe? <p/>
       <div id="result2"></div> 
     </li>
     
     <li> 
-      <p> ¿Cuál es la raza de perro más inteligente? <p/>
+      <p> ¿Cuál es la raza de perro más inteligente?<p/>
       <div id="result3"></div> 
     </li>
+      
 </ol>
 
 <table>
@@ -198,10 +200,10 @@
 <table>
 <tr>
     <td>
-    <button onclick="getThemesAgainA()">Volver a Jugar!</button>
+    <button onclick="getThemesAgainA()" class="button" >Volver a Jugar!</button>
     </td>
     <td>
-    <button onclick="endGameA()">Ir al inicio</button>
+    <button onclick="endGameA()" class="button" >Ir al inicio</button>
     </td>
   </tr>
 </table>
@@ -248,10 +250,10 @@
 <table>
 <tr>
     <td>
-    <button onclick="getThemesAgainB()">Volver a Jugar!</button>
+    <button onclick="getThemesAgainB()" class="button" >Volver a Jugar!</button>
     </td>
     <td>
-    <button onclick="endGameB()">Ir al inicio</button>
+    <button onclick="endGameB()" class="button" >Ir al inicio</button>
     </td>
   </tr>
 </table>

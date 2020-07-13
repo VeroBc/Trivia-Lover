@@ -2,32 +2,25 @@ h1 {
   color: rgb(94, 13, 97);
   font-size: 30px;
   text-align: center;
-  font-family: 'Cambria';
-   
+  font-family: system-ui;
+ 
 }
 
-input {
+h2 {
+  color: rgb(94, 13, 97);
+  font-size: 20px;
   text-align: center;
-  font-family: 'Calibri';
-
-  
-}
-
-label {
-  font-size: 15px;
-  font-family:'Helvetica';
-  
+  font-family: system-ui;
+   
 }
 
 .bloque {
   display: flex;
-  border: 2px solid  #49274A;
   margin: 20px;
   padding: 20px;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-image: url(https://user-images.githubusercontent.com/55853256/85799797-742c4800-b705-11ea-9877-5554d32b052f.jpg);
   width: 100%;
 }
 
@@ -35,21 +28,36 @@ label {
   display: none;
 }
 
-.boton {
- border: 1px solid #2e518b; 
-padding: 10px; 
-background-color: #2e518b; 
-color: #ffffff; 
-text-decoration: none; 
-text-transform: uppercase; 
-font-family: 'Helvetica', sans-serif; 
-border-radius: 50px; 
+p , label {
+  color: rgb(94, 13, 97);
+  font-size: 16px;
+  font-family: system-ui;
+} 
+ 
 
+body {
+  background-image: url(https://user-images.githubusercontent.com/55853256/85799797-742c4800-b705-11ea-9877-5554d32b052f.jpg);
 }
 
-p {
-  color: rgb(94, 13, 97);
-  font-size: 15px;
-  font-family: 'Helvetica';
- } 
+
+.button {
+  background-color: rgb(145, 23, 104);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: system-ui;
+  border-radius: 8px;
  
+}
+
+.nombre {
+  font-size: 16px;
+  font-family: system-ui;
+  text-align: center;
+}

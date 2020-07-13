@@ -45,11 +45,12 @@ function getResultsA(){
 }
 
 function getResultsDogLover() { 
-            var ele = document.getElementsByName('doglover1'); 
+            
+  var ele = document.getElementsByName('doglover1'); 
               
             for(i = 0; i < ele.length; i++) { 
                 if(ele[i].checked) 
-                document.getElementById("result1").innerHTML = "Puntos: "+ele[i].value;              
+                document.getElementById("result1").innerHTML = "Puntos: "+ele[i].value;                             
             } 
 
             var ele = document.getElementsByName('doglover2'); 
@@ -64,8 +65,8 @@ function getResultsDogLover() {
             for(i = 0; i < ele.length; i++) { 
                 if(ele[i].checked) 
                 document.getElementById("result3").innerHTML = "Puntos: "+ele[i].value; 
-            } 
-        } 
+            }      
+} 
   
 function uncheckDogLover() {
   document.getElementById("olfato").checked = false;
@@ -93,7 +94,8 @@ function uncheckCatLover() {
 
 
 function getResultsCatLover() {
-            var ele = document.getElementsByName('catlover1');
+  
+  var ele = document.getElementsByName('catlover1');
 
             for(i = 0; i < ele.length; i++) {
                 if(ele[i].checked)
@@ -113,7 +115,7 @@ function getResultsCatLover() {
                 if(ele[i].checked)
                 document.getElementById("result6").innerHTML = "Puntos: "+ ele[i].value;
             } 
-        }
+}
 
 
 function getResultsB(){
